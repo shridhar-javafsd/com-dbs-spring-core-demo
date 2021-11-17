@@ -1,6 +1,7 @@
 package com.dbs.spring.core.demo;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class App {
@@ -23,5 +24,8 @@ public class App {
 		System.out.println(obj2.toString());
 
 		System.out.println("End");
+
+		((AbstractApplicationContext) context).close();
+
 	}
 }
