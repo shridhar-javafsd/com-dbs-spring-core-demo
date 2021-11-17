@@ -1,5 +1,8 @@
 package com.dbs.spring.core.demo;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Employee {
 
 	private int eid;
