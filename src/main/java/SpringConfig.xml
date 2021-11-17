@@ -10,7 +10,7 @@
 		<property name="firstName">
 			<value>Sonu</value>
 		</property>
-		<property name="eid">
+		<property name="salary">
 			<value>35000</value>
 		</property>
 	</bean>
@@ -22,7 +22,7 @@
 		<property name="firstName">
 			<value>Monu</value>
 		</property>
-		<property name="eid">
+		<property name="salary">
 			<value>65000</value>
 		</property>
 	</bean>
