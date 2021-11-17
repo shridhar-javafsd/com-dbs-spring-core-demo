@@ -11,7 +11,7 @@ public class App {
 
 //		Employee obj = new Employee();
 
-		ApplicationContext context = new ClassPathXmlApplicationContext();
+		ApplicationContext context = new ClassPathXmlApplicationContext("SpringConfig.xml");
 
 		Employee obj = context.getBean(Employee.class);
 
