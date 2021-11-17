@@ -3,7 +3,29 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
  http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
 
-	<bean id="employee" class="com.dbs.spring.core.demo.Employee">
+	<bean id="emp" class="com.dbs.spring.core.demo.Employee">
+		<property name="eid">
+			<value>101</value>
+		</property>
+		<property name="firstName">
+			<value>Sonu</value>
+		</property>
+		<property name="eid">
+			<value>35000</value>
+		</property>
 	</bean>
+
+	<bean id="emp2" class="com.dbs.spring.core.demo.Employee">
+		<property name="eid">
+			<value>102</value>
+		</property>
+		<property name="firstName">
+			<value>Monu</value>
+		</property>
+		<property name="eid">
+			<value>65000</value>
+		</property>
+	</bean>
+
 
 </beans>
