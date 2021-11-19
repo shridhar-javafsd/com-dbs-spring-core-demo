@@ -18,7 +18,7 @@ public class JdbcDemo {
 		String url = "jdbc:mariadb://localhost:3306/sys";
 		String user = "root";
 		String password = "root";
-		String sql = "SELECT * FROM emp_table";
+		String sql = "SELECT * FROM emp_table;";
 
 		Class.forName(className);
 		Connection con = DriverManager.getConnection(url, user, password);

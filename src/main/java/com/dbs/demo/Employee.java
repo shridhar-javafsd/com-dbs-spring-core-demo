@@ -5,11 +5,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class Employee {
 
-	private int eid;
+	private int eid; // 2.14 bn Integer.MAX_VALUE
 	private String firstName;
 	private double salary;
 
 	public Employee() {
+		
 		super();
 	}
 
