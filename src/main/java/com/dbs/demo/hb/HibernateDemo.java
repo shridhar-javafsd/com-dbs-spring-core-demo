@@ -14,14 +14,15 @@ public class HibernateDemo {
 		System.out.println("Start");
 
 		Configuration config = new Configuration();
-
 		SessionFactory factory = config.configure().buildSessionFactory();
-
 		Session session = factory.openSession();
 		Transaction transaction = session.beginTransaction();
-		Employee emp = new Employee(101, "Sonu", 45678.9);
+
+		Employee emp = new Employee(501, "Sonu", 45678.9);
 		session.save(emp);
+		
 		transaction.commit();
+
 		System.out.println("End");
 	}
 
