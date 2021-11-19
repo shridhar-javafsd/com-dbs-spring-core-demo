@@ -6,9 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class JdbcDemo {
-
-//	loading class, connection, query , resultset  , process 		
+public class JdbcDemo2 {
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
 
@@ -24,11 +22,21 @@ public class JdbcDemo {
 		Connection con = DriverManager.getConnection(url, user, password);
 		Statement st = con.createStatement();
 		ResultSet rs = st.executeQuery(sql);
+//
+//		while (rs.next()) {
+//			System.out.println(rs.getString(1) + " " + rs.getString(2) + " " + rs.getString(3));
+//		}
+
+		sql = "INSERT into emp_table (eid, first_name, salary) VALUES (201, 'Sonu', 45124)";
+		st.executeUpdate(sql);
+		sql = "SELECT * FROM emp_table";
+		st.executeQuery(sql);
 
 		while (rs.next()) {
-			System.out.println(rs.getInt(1) + " " + rs.getString(2) + " " + rs.getDouble(3));
+			System.out.println(rs.getString(1) + " " + rs.getString(2) + " " + rs.getString(3));
 		}
 
 		System.out.println("End");
 	}
+
 }
