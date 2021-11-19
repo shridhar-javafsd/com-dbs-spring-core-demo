@@ -1,4 +1,4 @@
-package com.dbs.spring.core.demo;
+package com.dbs.demo;
 
 import org.springframework.stereotype.Component;
 
