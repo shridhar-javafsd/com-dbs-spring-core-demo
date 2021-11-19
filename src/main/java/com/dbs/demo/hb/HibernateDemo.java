@@ -18,11 +18,20 @@ public class HibernateDemo {
 		Session session = factory.openSession();
 		Transaction transaction = session.beginTransaction();
 
-		Employee emp = new Employee(501, "Sonu", 45678.9);
-		session.save(emp);
-		
-		transaction.commit();
-
+		Employee e1;
+		e1 = session.get(Employee.class, 201); // select
+		session.save(e1);
+		System.out.println(e1.toString());
+		session.evict(e1);
+		e1.setFirstName("Monu");
+		session.update(e1); // update
+		e1 = session.get(Employee.class, 202);
+		System.out.println(e1.toString());
+		session.delete(e1); // delete
+//		e1 = session.get(Employee.class, 101);
+		System.out.println(e1.toString());
+		session.close();
+		factory.close();
 		System.out.println("End");
 	}
 
