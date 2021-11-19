@@ -1,16 +1,26 @@
 package com.dbs.demo;
 
-import org.springframework.stereotype.Component;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-@Component
+@Entity
+@Table(name = "emp_hb_table")
 public class Employee {
 
-	private int eid; // 2.14 bn Integer.MAX_VALUE
+	@Id
+	@Column
+	private int eid;
+
+	@Column
 	private String firstName;
+
+	@Column
 	private double salary;
 
 	public Employee() {
-		
+
 		super();
 	}
 
