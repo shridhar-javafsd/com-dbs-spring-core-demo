@@ -18,8 +18,10 @@ public class JpaDemo {
 
 		em.getTransaction().begin();
 
-		Employee emp = new Employee(601, "Sonu", 123456.78);
-		em.persist(emp);
+		Employee emp = new Employee(602, "Monu", 223456.78);
+		em.persist(emp); // save();
+
+		em.getTransaction().commit(); // make the changes permanent 
 
 		System.out.println("End");
 

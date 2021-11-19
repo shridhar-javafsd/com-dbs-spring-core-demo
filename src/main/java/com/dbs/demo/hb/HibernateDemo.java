@@ -30,6 +30,7 @@ public class HibernateDemo {
 		session.delete(e1); // delete
 //		e1 = session.get(Employee.class, 101);
 		System.out.println(e1.toString());
+		transaction.commit();
 		session.close();
 		factory.close();
 		System.out.println("End");
